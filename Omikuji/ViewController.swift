@@ -12,10 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var label : UILabel!
     
-    var omikujiArray: [UILabel]!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
