@@ -27,19 +27,17 @@ class ViewController: UIViewController {
         
         let number = Int(rand() % 10)
         
-        var omikujiArray : [String] = ["大吉",
-                                       "中吉",
-                                       "中吉",
-                                       "吉",
-                                       "吉",
-                                       "吉",
-                                       "小吉",
-                                       "小吉",
-                                       "小吉",
-                                       "凶"
-        ]
-        
-        label.text = omikujiArray[number]
+        if number == 0 {
+            label.text = String("大吉")
+        }else if number <= 2 {
+            label.text = String("中吉")
+        }else if number <= 5 {
+            label.text = String("吉")
+        }else if number <= 8 {
+            label.text = String("小吉")
+        }else {
+            label.text = String("凶")
+        }
         
         if number == 0 {
             label.textColor = UIColor.redColor()
